@@ -89,7 +89,7 @@ a:active {
     border-style: solid;
     border-left-width: 0px;
     width: auto;
-    max-width: 35%;
+    width: 35%;
     height: auto;
 }
 
@@ -108,4 +108,5 @@ a:active {
     bottom: -1em;
     width: 100%;
     color: #85C6E1;
+    margin: 0;
 }
