@@ -2,7 +2,7 @@ var colors = ['silver', 'gray', 'white', 'maroon', 'red',
   'purple', 'fuchsia', 'green', 'lime', 'olive',
   'yellow', 'navy', 'blue', 'teal', 'aqua']
 
-const G = 9.81;
+var G = 9.81;
 const DELTA_T = 0.01;
 const MAX_Y_DOMAIN = 10;
   
@@ -188,9 +188,14 @@ function reloadModel(velocity, velocity_angle, height, coefficient, mass, radius
 function reloadForm() {
   const mass = parseFloat(document.getElementById('mass').value);
   const height = parseFloat(document.getElementById('height').value);
+  if (height < 0) {
+    window.alert('Изначальная высота мячика должна быть неотрицательной');
+    return;
+  } 
   const velocity = parseFloat(document.getElementById('velocity').value);
   const velocity_angle = parseFloat(document.getElementById('velocity_angle').value);
   const coefficient = parseFloat(document.getElementById('coefficient').value);
+  G = parseFloat(document.getElementById('g').value);
 
   let radius = 1;
 
